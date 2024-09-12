@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Filho - Personal Trainer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/Screenshot 2024-09-12 101423.png" alt="Pedro Filho - Personal Trainer">
+        <h1>Pedro Filho</h1>
+        <p class="title">Personal Trainer</p>
+        <p class="cref">CREF: 157682-G/SP</p>
+        <p class="motivational-text">Transforme sua vida com nossa Consultoria Online de Personal Trainer!</p>
+        <ul>
+            <li><a href="#" onclick="showDescription('avaliacao')">🏋️‍♂️ Avaliação Física Inicial</a></li>
+            <li><a href="#" onclick="showDescription('programa')">📋 Programa de Treinamento Personalizado</a></li>
+            <li><a href="#" onclick="showDescription('reavaliacao')">🔄 Reavaliação Física Mensal</a></li>
+            <li><a href="#" onclick="showDescription('suporte')">💬 Suporte por E-mail e WhatsApp</a></li>
+            <li><a href="#" onclick="showDescription('planos')">📅 Planos Flexíveis</a></li>
+        </ul>
+        <a href="https://wa.me/5511952404021?text=Olá%20Pedro%20Filho,%20gostaria%20de%20mais%20informações%20sobre%20seus%20treinos!"
+            class="whatsapp-btn">💬 Fale Comigo no WhatsApp</a>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script>
+        function showDescription(option) {
+            const modal = document.getElementById("modal");
+            const modalText = document.getElementById("modal-text");
+
+            switch (option) {
+                case 'avaliacao':
+                    modalText.innerHTML = `
+                        <strong>🏋️‍♂️ Avaliação Física Inicial:</strong><br>
+                        Realizamos uma avaliação física inicial, seja por videoconferência ou presencial, para entender suas necessidades e objetivos específicos.
+                    `;
+                    break;
+                case 'programa':
+                    modalText.innerHTML = `
+                        <strong>📋 Programa de Treinamento Personalizado:</strong><br>
+                        Desenvolvemos um programa de treinamento personalizado, incluindo vídeos demonstrativos, para garantir que você execute os exercícios corretamente.
+                    `;
+                    break;
+                case 'reavaliacao':
+                    modalText.innerHTML = `
+                        <strong>🔄 Reavaliação Física Mensal:</strong><br>
+                        Realizamos uma reavaliação física mensal para monitorar seu progresso e ajustar o programa de treinamento conforme necessário.
+                    `;
+                    break;
+                case 'suporte':
+                    modalText.innerHTML = `
+                        <strong>💬 Suporte por E-mail e WhatsApp:</strong><br>
+                        Oferecemos suporte via e-mail e WhatsApp para responder suas dúvidas e ajudá-lo a alcançar seus objetivos de forma eficiente.
+                    `;
+                    break;
+                case 'planos':
+                    modalText.innerHTML = `
+                        <strong>📅 Planos Flexíveis:</strong><br>
+                        Disponibilizamos planos mensais, trimestrais, semestrais e anuais, adaptáveis às suas necessidades e orçamento. Escolha o plano ideal e inicie sua jornada para uma vida mais saudável hoje mesmo!
+                    `;
+                    break;
+                default:
+                    modalText.innerHTML = `<strong>🚫 Opção inválida.</strong>`;
+            }
+
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById("modal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

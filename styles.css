@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa; 
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+}
+
+.box {
+    background-color: white;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 550px;
+    width: 100%;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.box img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.4rem;
+    color: #0277bd; 
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 1.6rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.cref {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+ul li {
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+ul li:before {
+    content: "✓ ";
+    color: #0277bd; 
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.motivational-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe5d;
+}
+
+ul li a {
+    text-decoration: none;
+    color: inherit; 
+    cursor: pointer;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    color: #0277bd; 
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #0277bd;
+}
